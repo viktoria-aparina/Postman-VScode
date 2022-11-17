@@ -1,0 +1,10 @@
+HTTP/1.1 201 Created
+Server: nginx/1.17.10 (Ubuntu)
+Date: Tue, 15 Nov 2022 16:09:19 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 92
+Connection: close
+X-Powered-By: Express
+ETag: W/"5c-NlJu/31dM7fPzchq+Q721PuB5i8"
+
+{"userID":"221102ac-484b-4ffd-8dd4-e3aaa4445205","username":"viktoria_aparinaaa","books":[]}

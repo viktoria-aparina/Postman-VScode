@@ -1,0 +1,71 @@
+@baseURL = https://bookstore.toolsqa.com/
+@userID = 221102ac-484b-4ffd-8dd4-e3aaa4445205
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InZpa3RvcmlhX2FwYXJpbmFhYSIsInBhc3N3b3JkIjoiMTIzNDU2Nzg5VnYxIyIsImlhdCI6MTY2ODUyODcxOH0.MIesLgLQ4pg519GxpKQqb2Mzh1nLLlhObTkmljS9nuM
+
+### Add new account ###
+POST {{baseURL}}Account/v1/User
+Content-Type: application/json
+accept: application/json
+
+{
+  "userName": "viktoria_aparinaaa",
+  "password": "123456789Vv1#"
+}
+
+### Get user token(Token) ###
+POST {{baseURL}}Account/v1/GenerateToken
+Content-Type: application/json
+accept: application/json
+
+{
+  "userName": "viktoria_aparinaaa",
+  "password": "123456789Vv1#"
+}
+
+### User's authorization ###
+POST {{baseURL}}Account/v1/Authorized
+Content-Type: application/json
+accept: application/json
+
+{
+  "userName": "viktoria_aparinaaa",
+  "password": "123456789Vv1#"
+}
+
+### Get user order(Token) ###
+GET {{baseURL}}Account/v1/User/{{userID}}
+Content-Type: application/json
+accept: application/json
+Authorization: Bearer {{token}}
+
+### Get all bookList ###
+GET {{baseURL}}BookStore/v1/Books
+Content-Type: application/json
+accept: application/json
+
+### Create an order ###
+POST {{baseURL}}BookStore/v1/Books
+Content-Type: application/json
+accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "userId": "{{userID}}",
+  "collectionOfIsbns": [
+    {
+      "isbn": "9781593277574"
+    }, 
+    {
+      "isbn": "9781593275846"
+    }, 
+    {
+      "isbn": "9781491950296"
+    }
+  ]
+}
+
+### Delete all books from order ###
+DELETE {{baseURL}}BookStore/v1/Books?UserId={{userID}}
+Content-Type: application/json
+accept: application/json
+Authorization: Bearer {{token}}
