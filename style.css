@@ -1,0 +1,47 @@
+table { 
+     border-collapse: collapse;
+     border: 3px #6d7ea8;
+     width: 600px;
+     font-family: Georgia, serif;
+   }
+   td { 
+    border: 3px solid #FFFFFF;
+    color: #696969;
+    position: relative;
+    text-align: center;
+   }
+   th {
+    border: 3px solid #FFFFFF;
+    font-weight: bold;
+    background: #99FFCC;
+    color: #696969;
+    position: relative;
+    padding: 15px;
+  }
+  td a {
+    text-decoration: none;
+    color: #696969;
+    padding: 15px;
+    display: block;
+  }
+  td:hover {
+    background-color: #dddddd;
+    transition: 0.5s;
+  }
+  caption {
+    font-family: Georgia, serif;
+    font-weight: 600px;
+    font-size: 2em;
+    padding: 10px; 
+    color: #454b5cdb;
+    text-shadow: 2px 1px;
+  }
+  .iphone12 {
+    background: #F4A460;
+  }
+  .iphone13 {
+    background: #ADD8E6;
+  }
+  .iphone14 {
+    background: #F8E391;
+  }
